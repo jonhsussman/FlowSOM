@@ -222,11 +222,10 @@ SOM <- function (data, xdim = 10, ydim = 10, rlen = 10, mst = 1,
     codes <- matrix(res$codes, nrow(codes), ncol(codes))
     colnames(codes) <- colnames(data)
     nhbrdist <- Dist.MST(codes)
-  }
-  
-  if(!silent) message("Mapping data to SOM\n")
+  } 
 
   if (map)
+    if(!silent) message("Mapping data to SOM\n")
     mapping <- MapDataToCodes(codes, data)
   else
     mapping <- NULL
