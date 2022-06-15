@@ -224,9 +224,10 @@ SOM <- function (data, xdim = 10, ydim = 10, rlen = 10, mst = 1,
     nhbrdist <- Dist.MST(codes)
   } 
 
-  if (map)
+  if (map) {
     if(!silent) message("Mapping data to SOM\n")
     mapping <- MapDataToCodes(codes, data)
+  }
   else
     mapping <- NULL
   
