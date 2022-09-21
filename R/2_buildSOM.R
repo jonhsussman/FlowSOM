@@ -246,7 +246,7 @@ SOM <- function (data, xdim = 10, ydim = 10, rlen = 10, mst = 1,
 #'              4 = cosine)
 #' 
 #' @return Array with nearest node id for each datapoint
-#' 
+#' @export
 MapDataToCodes <- function (codes, newdata, distf = 2) {
   
   nnCodes <- .C("C_mapDataToCodes", 
